@@ -1,8 +1,13 @@
+# NOTICE: vendorsetup.sh will deprecated in favor of lineage.dependencies
+
 # Remove Pixel kernel header
 rm -rf hardware/google/pixel/kernel_headers/Android.bp
 
 # Clone vendor tree
 git clone https://github.com/alternoegraha/vendor_xiaomi_fog vendor/xiaomi/fog
+
+# Clone GApps
+git clone -b upsilon https://gitlab.com/MindTheGApps/vendor_gapps vendor/gapps
 
 # Clone kernel tree
 git clone --depth=1 https://github.com/alternoegraha/wwy_kernel_xiaomi_fog_rebase kernel/xiaomi/fog
